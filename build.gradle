@@ -18,6 +18,10 @@ targetCompatibility = '1.7'
 // The main class of the application
 //mainClassName = ''
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.6'
+}
+
 // Set our project variables
 project.ext {
     versionJunit      = '4.11'
