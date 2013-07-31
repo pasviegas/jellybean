@@ -14,7 +14,7 @@ public class ProjectServiceImplTest {
 
     @Before
     public void setup(){
-        initMocks(mockProjectDao);
+        initMocks(this);
     }
 
     @org.junit.Test
