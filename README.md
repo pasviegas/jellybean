@@ -6,6 +6,14 @@ TW Bootcamp
 How to install Jenkins
 ======================
 
+We need:
+    brew: ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+    python: brew install python
+    pip: brew install pip
+    fabric: pip install fabric
+    vagrant: http://downloads.vagrantup.com
+
+
 Install Vagrant by installing the deb package from http://vagrantup.com/ (click
 "Download Now"). Add the executable ``/opt/vagrant/bin/vagrant`` into your
 PATH. Install VirtualBox by ``apt-get install virtualbox``.
