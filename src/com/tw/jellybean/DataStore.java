@@ -2,6 +2,9 @@ package com.tw.jellybean;
 
 import com.tw.jellybean.model.Consultant;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: somisetn
@@ -10,8 +13,16 @@ import com.tw.jellybean.model.Consultant;
  * To change this template use File | Settings | File Templates.
  */
 public class DataStore {
-    public boolean saveConsultant(Consultant consultant) {
 
+    public  List<Consultant> getConsultants() {
+        return consultants;
+    }
+
+
+    List<Consultant> consultants = new ArrayList<Consultant>();
+
+    public boolean saveConsultant(Consultant consultant) {
+         consultants.add(consultant);
         return false;
     }
 }
