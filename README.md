@@ -28,8 +28,9 @@ Then bring it up and install Jenkins::
     fab vagrant jenkins forward_port
 
 Access Jenkins at: http://localhost:8080/
-To install NumPy and SymPy tests, do::
 
-    fab vagrant jenkins_add_numpy jenkins_add_sympy
+To install the jobs, do::
+
+    fab vagrant jenkins_add_jellybean_build jenkins_add_jellybean_test
 
 credits to: https://github.com/certik/vagrant-jenkins
