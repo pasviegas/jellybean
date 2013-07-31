@@ -30,5 +30,5 @@ repositories{
 
 dependencies{
     // declare the dependency for your favourite test framework you want to use in your tests.
-    testCompile group: 'junit',                   name: 'junit',              version: versionJunit
+    testCompile group: 'junit', name: 'junit', version: versionJunit
 }
