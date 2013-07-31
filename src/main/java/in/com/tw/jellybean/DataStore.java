@@ -23,6 +23,6 @@ public class DataStore {
 
     public boolean saveConsultant(Consultant consultant) {
          consultants.add(consultant);
-        return false;
+        return true;
     }
 }
