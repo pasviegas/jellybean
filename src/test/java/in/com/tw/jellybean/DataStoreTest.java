@@ -2,11 +2,11 @@ package in.com.tw.jellybean;
 
 import in.com.tw.jellybean.DataStore;
 import in.com.tw.jellybean.models.*;
-import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.Assert.*;
+import static junit.framework.Assert.assertEquals;
+
 
 /**
  * Created with IntelliJ IDEA.
