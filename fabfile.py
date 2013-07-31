@@ -41,15 +41,13 @@ def _jenkins_restart():
     # work (http://docs.fabfile.org/en/1.4.1/faq.html#init-scripts-don-t-work)
     sudo("/etc/init.d/jenkins restart", pty=False)
 
-def jenkins_add_sympy():
-    _jenkins_add_job("SymPy", "https://github.com/sympy/sympy", "master",
-            "bin/test sympy/core")
+def jenkins_add_jellybean_build():
+    _jenkins_add_job("build", "https://github.com/pasviegas/jellybean", "master", "gradle build")
     # Restart Jenkins to register the new job
     _jenkins_restart()
 
-def jenkins_add_numpy():
-    _jenkins_add_job("NumPy", "https://github.com/numpy/numpy", "master",
-            "python setup.py install")
+def jenkins_add_jellybean_test():
+    _jenkins_add_job("unit_test", "https://github.com/pasviegas/jellybean", "master", "gradle test")
     # Restart Jenkins to register the new job
     _jenkins_restart()
 
@@ -163,7 +161,7 @@ def vagrant():
     # connect to the port-forwarded ssh
     env.hosts = ['%s:%s' % (vc['HostName'], vc['Port'])]
     # use vagrant ssh key
-    env.key_filename = vc['IdentityFile']
+    env.key_filename = vc['IdentityFile'].strip('"')
 
 def _get_vagrant_config():
     """
