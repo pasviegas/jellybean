@@ -1,12 +1,9 @@
 .gradle
 /build
-.idea/*
+
 *.class
 
 # Package Files #
 *.jar
 *.war
 *.ear
-
-.idea/*
-*.iml
