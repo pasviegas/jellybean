@@ -1,0 +1,34 @@
+apply plugin:'java'         // applies the java plugin
+apply plugin:'idea'         // applies the idea plugin
+apply plugin:'maven'        // applies the maven plugin
+apply plugin:'application'  // applies the application plugin
+
+// Project info
+group = 'jellybean'
+version = '0.1.0-SNAPSHOT'
+description = 'bootcamp jigsaw'
+
+// Use Java 7 by default
+sourceCompatibility = '1.7'
+targetCompatibility = '1.7'
+
+// UTF-8 should be standard by now. So use it!
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+// The main class of the application
+//mainClassName = ''
+
+// Set our project variables
+project.ext {
+    versionJunit      = '4.11'
+}
+
+repositories{
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies{
+    // declare the dependency for your favourite test framework you want to use in your tests.
+    testCompile group: 'junit',                   name: 'junit',              version: versionJunit
+}
