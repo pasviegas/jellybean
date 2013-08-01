@@ -1,6 +1,6 @@
 package in.com.tw.jellybean.model;
 
-import in.com.tw.jellybean.models.Project;
+import in.com.tw.jellybean.models.project.Project;
 import org.junit.Test;
 
 import java.util.Calendar;

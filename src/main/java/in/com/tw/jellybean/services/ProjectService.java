@@ -1,6 +1,6 @@
 package in.com.tw.jellybean.services;
 
-import in.com.tw.jellybean.models.Project;
+import in.com.tw.jellybean.models.project.Project;
 
 import java.util.List;
 

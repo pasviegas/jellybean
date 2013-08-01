@@ -1,7 +1,6 @@
-package in.com.tw.jellybean.models;
+package in.com.tw.jellybean.models.project;
 
 
-import java.util.Calendar;
 import java.util.Currency;
 import java.util.Date;
 

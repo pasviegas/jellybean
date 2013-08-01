@@ -1,13 +1,13 @@
-package in.com.tw.jellybean.models;
+package in.com.tw.jellybean.models.project;
 
 /**
  * Created with IntelliJ IDEA.
  * User: indraneel
  * Date: 31/7/13
- * Time: 3:02 PM
+ * Time: 3:01 PM
  * To change this template use File | Settings | File Templates.
  */
-public enum RateType {
-    HOURLY,
-    DAILY,
+public enum ContractType {
+    TM,
+    ACTUALS,
 }

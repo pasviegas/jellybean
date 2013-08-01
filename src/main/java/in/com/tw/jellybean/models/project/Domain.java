@@ -1,4 +1,4 @@
-package in.com.tw.jellybean.models;
+package in.com.tw.jellybean.models.project;
 
 /**
  * Created with IntelliJ IDEA.
