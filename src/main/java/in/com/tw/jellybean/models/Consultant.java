@@ -12,22 +12,11 @@ public class Consultant extends Person {
     Grade grade;
     Department department;
 
-    public Consultant(String name,int age,Gender gender,Department department, Role role, Grade grade) {
-        super(name,age,gender);
+    public Consultant(Person person,Department department, Role role, Grade grade) {
+        super(person.getName(),person.getAge(),person.getGender());
         this.department = department;
         this.role = role;
         this.grade = grade;
     }
 
-    public Department getDepartment() {
-        return department;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public Grade getGrade() {
-        return grade;
-    }
 }

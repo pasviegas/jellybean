@@ -23,6 +23,7 @@ public class ConsultantManagementServiceTest {
 
     private ConsultantManagementService consultantManagementService;
     private Consultant consultant;
+    private Person testPerson;
 
     @Mock
     DataStore mockDataStore;
@@ -30,8 +31,9 @@ public class ConsultantManagementServiceTest {
     @Before
     public void setup(){
         initMocks(this);
+        testPerson = new Person("test",23, Gender.MALE);
         consultantManagementService = new ConsultantManagementService(mockDataStore);
-        consultant = new Consultant("test",23, Gender.MALE, Department.PS, Role.DEV, Grade.CONSULTANT);
+        consultant = new Consultant( testPerson,Department.PS, Role.DEV, Grade.CONSULTANT);
     }
     @Test
     public void shouldSaveConsultant(){

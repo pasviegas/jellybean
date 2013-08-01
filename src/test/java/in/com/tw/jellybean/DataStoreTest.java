@@ -18,20 +18,23 @@ import static junit.framework.Assert.assertEquals;
 public class DataStoreTest {
     DataStore dataStore;
     Consultant consultant;
+    private Person testPerson;
+
 
     @Before
-    public void setup(){
+    public void setup() {
         dataStore = new DataStore();
-        consultant = new Consultant("test",23, Gender.MALE, Department.PS, Role.DEV, Grade.CONSULTANT);
+        testPerson = new Person("test", 23, Gender.MALE);
+        consultant = new Consultant(testPerson, Department.PS, Role.DEV, Grade.CONSULTANT);
     }
 
     @Test
-    public void shouldSaveConsultant(){
+    public void shouldSaveConsultant() {
         boolean saveResult = dataStore.saveConsultant(consultant);
 
-        assertEquals(true,saveResult);
+        assertEquals(true, saveResult);
         assertEquals(1, dataStore.getConsultants().size());
-        assertEquals(consultant,dataStore.getConsultants().get(0));
+        assertEquals(consultant, dataStore.getConsultants().get(0));
 
     }
 
