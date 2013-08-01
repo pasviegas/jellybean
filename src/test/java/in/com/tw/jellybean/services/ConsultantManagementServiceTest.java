@@ -2,7 +2,6 @@ package in.com.tw.jellybean.services;
 
 import in.com.tw.jellybean.DataStore;
 import in.com.tw.jellybean.models.*;
-import in.com.tw.jellybean.services.ConsultantManagementService;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -32,7 +31,7 @@ public class ConsultantManagementServiceTest {
     public void setup(){
         initMocks(this);
         testPerson = new Person("test",23, Gender.MALE);
-        consultantManagementService = new ConsultantManagementService(mockDataStore);
+        consultantManagementService = new ConsultantManagementServiceImpl(mockDataStore);
         consultant = new Consultant( testPerson,Department.PS, Role.DEV, Grade.CONSULTANT);
     }
     @Test
