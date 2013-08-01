@@ -11,9 +11,6 @@ description = 'bootcamp jigsaw'
 // UTF-8 should be standard by now. So use it!
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
-// The main class of the application
-//mainClassName = ''
-
 task wrapper(type: Wrapper) {
     gradleVersion = '1.6'
 }
