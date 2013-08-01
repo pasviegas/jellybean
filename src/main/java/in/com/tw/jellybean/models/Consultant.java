@@ -1,6 +1,10 @@
 package in.com.tw.jellybean.models;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,6 +18,7 @@ public class Consultant extends Person {
     Grade grade;
     Department department;
     BigDecimal experience;
+    List<TimeRecord> timeRecords = new ArrayList<TimeRecord>();
 
     public Consultant(Person person,Department department, Role role, Grade grade,BigDecimal experience) {
         super(person.getName(),person.getAge(),person.getGender());
@@ -22,6 +27,10 @@ public class Consultant extends Person {
         this.grade = grade;
         this.experience = experience;
 
+    }
+
+    public List<TimeRecord> getTimeRecords() {
+        return timeRecords;
     }
 
 }
