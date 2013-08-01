@@ -1,6 +1,6 @@
 package in.com.tw.jellybean.services;
 
-import in.com.tw.jellybean.DataStore;
+import in.com.tw.jellybean.dao.ConsultantDao;
 import in.com.tw.jellybean.models.Consultant;
 
 /**
@@ -12,14 +12,14 @@ import in.com.tw.jellybean.models.Consultant;
  */
 public class ConsultantManagementServiceImpl implements ConsultantManagementService{
 
-    private DataStore dataStore;
+    private ConsultantDao consultantDao;
 
-    public ConsultantManagementServiceImpl(DataStore dataStore) {
-        this.dataStore = dataStore;
+    public ConsultantManagementServiceImpl(ConsultantDao consultantDao) {
+        this.consultantDao = consultantDao;
     }
 
     public boolean save(Consultant consultant) {
 
-        return dataStore.saveConsultant(consultant);  //To change body of created methods use File | Settings | File Templates.
+        return consultantDao.save(consultant);  //To change body of created methods use File | Settings | File Templates.
     }
 }

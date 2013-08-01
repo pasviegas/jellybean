@@ -1,15 +1,17 @@
 package in.com.tw.jellybean.services;
 
-import in.com.tw.jellybean.DataStore;
+import in.com.tw.jellybean.dao.ConsultantDao;
 import in.com.tw.jellybean.models.*;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
-import static junit.framework.Assert.*;
+import java.math.BigDecimal;
+
+import static junit.framework.Assert.assertEquals;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static org.mockito.MockitoAnnotations.*;
+import static org.mockito.MockitoAnnotations.initMocks;
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,23 +27,23 @@ public class ConsultantManagementServiceTest {
     private Person testPerson;
 
     @Mock
-    DataStore mockDataStore;
+    ConsultantDao consultantDao;
 
     @Before
     public void setup(){
         initMocks(this);
         testPerson = new Person("test",23, Gender.MALE);
-        consultantManagementService = new ConsultantManagementServiceImpl(mockDataStore);
-        consultant = new Consultant( testPerson,Department.PS, Role.DEV, Grade.CONSULTANT,3.2f);
+        consultantManagementService = new ConsultantManagementServiceImpl(consultantDao);
+        consultant = new Consultant( testPerson,Department.PS, Role.DEV, Grade.CONSULTANT, BigDecimal.valueOf(3.2f));
     }
     @Test
     public void shouldSaveConsultant(){
 
-        when(mockDataStore.saveConsultant(consultant)).thenReturn(true);
+        when(consultantDao.save(consultant)).thenReturn(true);
 
         assertEquals(true, consultantManagementService.save(consultant));
 
-        verify(mockDataStore).saveConsultant(consultant);
+        verify(consultantDao).save(consultant);
     }
 
 

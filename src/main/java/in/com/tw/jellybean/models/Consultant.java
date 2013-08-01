@@ -1,5 +1,7 @@
 package in.com.tw.jellybean.models;
 
+import java.math.BigDecimal;
+
 /**
  * Created with IntelliJ IDEA.
  * User: somisetn
@@ -11,9 +13,9 @@ public class Consultant extends Person {
     Role role;
     Grade grade;
     Department department;
-    float experience;
+    BigDecimal experience;
 
-    public Consultant(Person person,Department department, Role role, Grade grade,float experience) {
+    public Consultant(Person person,Department department, Role role, Grade grade,BigDecimal experience) {
         super(person.getName(),person.getAge(),person.getGender());
         this.department = department;
         this.role = role;
