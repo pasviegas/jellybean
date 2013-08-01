@@ -1,6 +1,9 @@
 package in.com.tw.jellybean.services;
 
 import in.com.tw.jellybean.models.Customer;
+import in.com.tw.jellybean.models.Project;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,5 +13,6 @@ import in.com.tw.jellybean.models.Customer;
  * To change this template use File | Settings | File Templates.
  */
 public interface CustomerManagementService {
-    boolean add(Customer customer);
+    boolean save(Customer customer);
+    boolean addProject(Customer customer, Project projects);
 }

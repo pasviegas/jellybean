@@ -1,5 +1,6 @@
 package in.com.tw.jellybean.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,13 +12,17 @@ import java.util.List;
  */
 public class Customer {
     private String name;
-    private List<Project> projects;
+
+    private List<Project> projects = new ArrayList<Project>();
 
     public Customer(String name){
         this.name = name;
     }
 
-    public void setProjects(List<Project> projects){
-        this.projects= projects;
+    public List<Project> getProjects() {
+        return projects;
+    }
+    public void addProject(Project project){
+      projects.add(project);
     }
 }

@@ -2,6 +2,7 @@ package in.com.tw.jellybean.services;
 
 import in.com.tw.jellybean.dao.CustomerDao;
 import in.com.tw.jellybean.models.Customer;
+import in.com.tw.jellybean.models.Project;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,8 +18,18 @@ public class CustomerManagementServiceImpl  implements CustomerManagementService
     public CustomerManagementServiceImpl(CustomerDao customerDao) {
         this.customerDao = customerDao;
     }
+
+
     @Override
-    public boolean add(Customer customer) {
-        return customerDao.add(customer);  //To change body of implemented methods use File | Settings | File Templates.
+    public boolean save(Customer customer) {
+        return customerDao.save(customer);
     }
+
+    @Override
+    public boolean addProject(Customer customer, Project project) {
+        customer.addProject(project);
+        customerDao.save(customer);
+        return true;
+    }
+
 }

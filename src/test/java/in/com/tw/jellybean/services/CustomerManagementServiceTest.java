@@ -3,7 +3,7 @@ package in.com.tw.jellybean.services;
 
 import in.com.tw.jellybean.dao.CustomerDao;
 import in.com.tw.jellybean.models.Customer;
-import junit.framework.Assert;
+import in.com.tw.jellybean.models.Project;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -25,6 +25,8 @@ public class CustomerManagementServiceTest {
 
     private CustomerManagementServiceImpl customerManagementService;
     private Customer testCustomer;
+    private Project testProject;
+
     @Mock
     CustomerDao customerDao;
 
@@ -38,11 +40,23 @@ public class CustomerManagementServiceTest {
     @Test
     public void shouldAddCustomer(){
 
-        when(customerDao.add(testCustomer)).thenReturn(true);
+        when(customerDao.save(testCustomer)).thenReturn(true);
 
-        assertEquals(true, customerManagementService.add(testCustomer));
+        assertEquals(true, customerManagementService.save(testCustomer));
 
-        verify(customerDao).add(testCustomer);
+        verify(customerDao).save(testCustomer);
+    }
+
+
+    @Test
+    public void shouldAddProject(){
+        when(customerDao.save(testCustomer)).thenReturn(true);
+
+        assertEquals(true, customerManagementService.addProject(testCustomer, testProject));
+
+        verify(customerDao).save(testCustomer);
+
+
     }
 
 

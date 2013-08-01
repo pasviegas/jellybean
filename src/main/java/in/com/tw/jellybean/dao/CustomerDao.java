@@ -1,6 +1,9 @@
 package in.com.tw.jellybean.dao;
 
 import in.com.tw.jellybean.models.Customer;
+import in.com.tw.jellybean.models.Project;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,8 +14,10 @@ import in.com.tw.jellybean.models.Customer;
  */
 public class CustomerDao {
 
-    public boolean add(Customer customer) {
+    public boolean save(Customer customer) {
         System.out.println("Saving the customer");
         return true;
     }
+
+
 }

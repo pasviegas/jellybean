@@ -16,6 +16,7 @@ public class Project {
     private Location locationOfWork ;
     private Domain domain;
     private ProjectStatus status;
+    private String customerName;
 
     @Override
     public String toString() {
@@ -30,6 +31,7 @@ public class Project {
                 ", locationOfWork=" + locationOfWork +
                 ", domain=" + domain +
                 ", status=" + status +
+                ", customerName=" + customerName +
                 '}';
     }
 
@@ -116,5 +118,9 @@ public class Project {
     public int getDurationInDays() {
         long diffDays = endDate.getTime() - startDate.getTime();
         return (int) (diffDays/(24*60*60*1000));
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 }
