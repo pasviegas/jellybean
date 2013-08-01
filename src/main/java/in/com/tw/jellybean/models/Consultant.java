@@ -11,12 +11,15 @@ public class Consultant extends Person {
     Role role;
     Grade grade;
     Department department;
+    float experience;
 
-    public Consultant(Person person,Department department, Role role, Grade grade) {
+    public Consultant(Person person,Department department, Role role, Grade grade,float experience) {
         super(person.getName(),person.getAge(),person.getGender());
         this.department = department;
         this.role = role;
         this.grade = grade;
+        this.experience = experience;
+
     }
 
 }

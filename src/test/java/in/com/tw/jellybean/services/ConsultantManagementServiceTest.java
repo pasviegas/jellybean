@@ -32,7 +32,7 @@ public class ConsultantManagementServiceTest {
         initMocks(this);
         testPerson = new Person("test",23, Gender.MALE);
         consultantManagementService = new ConsultantManagementServiceImpl(mockDataStore);
-        consultant = new Consultant( testPerson,Department.PS, Role.DEV, Grade.CONSULTANT);
+        consultant = new Consultant( testPerson,Department.PS, Role.DEV, Grade.CONSULTANT,3.2f);
     }
     @Test
     public void shouldSaveConsultant(){

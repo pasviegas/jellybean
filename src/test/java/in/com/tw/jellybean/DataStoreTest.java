@@ -25,7 +25,7 @@ public class DataStoreTest {
     public void setup() {
         dataStore = new DataStore();
         testPerson = new Person("test", 23, Gender.MALE);
-        consultant = new Consultant(testPerson, Department.PS, Role.DEV, Grade.CONSULTANT);
+        consultant = new Consultant(testPerson, Department.PS, Role.DEV, Grade.CONSULTANT,2.4f);
     }
 
     @Test
