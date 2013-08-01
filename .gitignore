@@ -12,3 +12,5 @@ build/*
 *.iml
 *.iwr
 *.ips
+
+.DS_Store
