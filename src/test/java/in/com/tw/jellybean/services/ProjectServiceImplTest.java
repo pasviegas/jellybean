@@ -2,6 +2,7 @@ package in.com.tw.jellybean.services;
 
 
 import in.com.tw.jellybean.dao.ProjectDao;
+import in.com.tw.jellybean.models.Customer;
 import in.com.tw.jellybean.models.project.Project;
 import org.junit.Before;
 import org.mockito.Mock;

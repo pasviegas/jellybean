@@ -3,7 +3,7 @@ package in.com.tw.jellybean.services;
 
 import in.com.tw.jellybean.dao.CustomerDao;
 import in.com.tw.jellybean.models.Customer;
-import in.com.tw.jellybean.models.Project;
+import in.com.tw.jellybean.models.project.Project;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -46,18 +46,5 @@ public class CustomerManagementServiceTest {
 
         verify(customerDao).save(testCustomer);
     }
-
-
-    @Test
-    public void shouldAddProject(){
-        when(customerDao.save(testCustomer)).thenReturn(true);
-
-        assertEquals(true, customerManagementService.addProject(testCustomer, testProject));
-
-        verify(customerDao).save(testCustomer);
-
-
-    }
-
 
 }

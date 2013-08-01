@@ -1,6 +1,8 @@
 package in.com.tw.jellybean.models.project;
 
 
+import in.com.tw.jellybean.models.Customer;
+
 import java.util.Currency;
 import java.util.Date;
 
@@ -16,7 +18,7 @@ public class Project {
     private Location locationOfWork ;
     private Domain domain;
     private ProjectStatus status;
-    private String customerName;
+    private Customer customer;
 
     @Override
     public String toString() {
@@ -31,7 +33,7 @@ public class Project {
                 ", locationOfWork=" + locationOfWork +
                 ", domain=" + domain +
                 ", status=" + status +
-                ", customerName=" + customerName +
+                ", customer=" + customer +
                 '}';
     }
 
@@ -120,7 +122,7 @@ public class Project {
         return (int) (diffDays/(24*60*60*1000));
     }
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 }

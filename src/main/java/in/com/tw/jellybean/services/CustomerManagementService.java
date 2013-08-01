@@ -1,7 +1,6 @@
 package in.com.tw.jellybean.services;
 
 import in.com.tw.jellybean.models.Customer;
-import in.com.tw.jellybean.models.Project;
 
 import java.util.List;
 
@@ -14,5 +13,4 @@ import java.util.List;
  */
 public interface CustomerManagementService {
     boolean save(Customer customer);
-    boolean addProject(Customer customer, Project projects);
 }

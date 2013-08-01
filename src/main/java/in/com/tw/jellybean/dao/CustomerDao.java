@@ -1,9 +1,6 @@
 package in.com.tw.jellybean.dao;
 
 import in.com.tw.jellybean.models.Customer;
-import in.com.tw.jellybean.models.Project;
-
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
