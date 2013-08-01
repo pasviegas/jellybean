@@ -6,6 +6,7 @@ def jenkins():
     run("wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -")
     sudo("sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'")
     sudo("apt-get -qq update")
+    sudo("apt-get -qq openjdk-6-jdk")
     sudo("apt-get -qq install jenkins")
     # Jenkins takes a while to start in the background, so we need to check
     # that the proper directories were created before proceeding:
@@ -42,12 +43,12 @@ def _jenkins_restart():
     sudo("/etc/init.d/jenkins restart", pty=False)
 
 def jenkins_add_jellybean_build():
-    _jenkins_add_job("build", "https://github.com/pasviegas/jellybean", "master", "gradle build")
+    _jenkins_add_job("build", "https://github.com/pasviegas/jellybean", "master", "./gradlew assemble")
     # Restart Jenkins to register the new job
     _jenkins_restart()
 
 def jenkins_add_jellybean_test():
-    _jenkins_add_job("unit_test", "https://github.com/pasviegas/jellybean", "master", "gradle test")
+    _jenkins_add_job("unit_test", "https://github.com/pasviegas/jellybean", "master", "./gradlew test")
     # Restart Jenkins to register the new job
     _jenkins_restart()
 
