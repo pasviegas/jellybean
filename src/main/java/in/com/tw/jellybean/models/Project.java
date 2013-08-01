@@ -16,7 +16,7 @@ public class Project {
     private Currency billingCurrency;
     private Location locationOfWork ;
     private Domain domain;
-
+    private ProjectStatus status;
 
     @Override
     public String toString() {
@@ -30,7 +30,16 @@ public class Project {
                 ", billingCurrency=" + billingCurrency +
                 ", locationOfWork=" + locationOfWork +
                 ", domain=" + domain +
+                ", status=" + status +
                 '}';
+    }
+
+    public ProjectStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(ProjectStatus status) {
+        this.status = status;
     }
 
     public String getName() {
