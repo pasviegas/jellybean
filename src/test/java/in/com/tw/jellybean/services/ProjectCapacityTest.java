@@ -26,7 +26,7 @@ public class ProjectCapacityTest {
     }
 
     @Test
-    public void shouldGetAllTheVacantSlots(){
+    public void shouldGetAllTheVacantPositions(){
 
         List<Position> openPositions = projectCapacityService.getAllOpenPositions();
 
@@ -34,7 +34,7 @@ public class ProjectCapacityTest {
     }
 
     @Test
-    public void shouldVacantSlotsForProject(){
+    public void shouldVacantPositionsForProject(){
 
         Project project =new Project();
         List<Position> openPositions = projectCapacityService.getOpenPositions(project);
