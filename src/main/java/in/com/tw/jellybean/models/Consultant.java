@@ -19,6 +19,7 @@ public class Consultant extends Person {
     Department department;
     BigDecimal experience;
     List<TimeRecord> timeRecords = new ArrayList<TimeRecord>();
+    private List<Position> assignedPositions;
 
     public Consultant(Person person,Department department, Role role, Grade grade,BigDecimal experience) {
         super(person.getName(),person.getAge(),person.getGender());

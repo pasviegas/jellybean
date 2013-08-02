@@ -1,8 +1,8 @@
 package in.com.tw.jellybean.services;
 
 import in.com.tw.jellybean.dao.ProjectCapacityDao;
+import in.com.tw.jellybean.models.Position;
 import in.com.tw.jellybean.models.project.Project;
-import in.com.tw.jellybean.models.Slot;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -28,17 +28,17 @@ public class ProjectCapacityTest {
     @Test
     public void shouldGetAllTheVacantSlots(){
 
-        List<Slot> openSlots = projectCapacityService.getAllOpenSlots();
+        List<Position> openPositions = projectCapacityService.getAllOpenPositions();
 
-        verify(projectCapacityDao).getAllOpenSlots();
+        verify(projectCapacityDao).getAllOpenPositions();
     }
 
     @Test
     public void shouldVacantSlotsForProject(){
 
         Project project =new Project();
-        List<Slot> openSlots = projectCapacityService.getOpenSlots(project);
+        List<Position> openPositions = projectCapacityService.getOpenPositions(project);
 
-        verify(projectCapacityDao).getOpenSlots(project);
+        verify(projectCapacityDao).getOpenPositions(project);
     }
 }

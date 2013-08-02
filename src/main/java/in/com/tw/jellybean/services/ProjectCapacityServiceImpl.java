@@ -1,8 +1,8 @@
 package in.com.tw.jellybean.services;
 
 import in.com.tw.jellybean.dao.ProjectCapacityDao;
+import in.com.tw.jellybean.models.Position;
 import in.com.tw.jellybean.models.project.Project;
-import in.com.tw.jellybean.models.Slot;
 
 import java.util.List;
 
@@ -14,12 +14,12 @@ public class ProjectCapacityServiceImpl implements ProjectCapacityService {
     }
 
     @Override
-    public List<Slot> getOpenSlots(Project project) {
-        return projectCapacityDao.getOpenSlots(project);
+    public List<Position> getOpenPositions(Project project) {
+        return projectCapacityDao.getOpenPositions(project);
     }
 
     @Override
-    public List<Slot> getAllOpenSlots() {
-        return projectCapacityDao.getAllOpenSlots();
+    public List<Position> getAllOpenPositions() {
+        return projectCapacityDao.getAllOpenPositions();
     }
 }

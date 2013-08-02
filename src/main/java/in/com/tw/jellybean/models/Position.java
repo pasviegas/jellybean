@@ -2,10 +2,9 @@ package in.com.tw.jellybean.models;
 
 import in.com.tw.jellybean.models.project.Project;
 
-public class Slot {
+public class Position {
     private Consultant consultant;
     private Role role;
-    private boolean vacant;
     private AssignmentStatus assignmentStatus;
     private Project project;
 
@@ -24,14 +23,6 @@ public class Slot {
 
     public void setRole(Role role) {
         this.role = role;
-    }
-
-    public boolean isVacant() {
-        return vacant;
-    }
-
-    public void setVacant(boolean vacant) {
-        this.vacant = vacant;
     }
 
     public AssignmentStatus getAssignmentStatus() {

@@ -2,9 +2,11 @@ package in.com.tw.jellybean.models.project;
 
 
 import in.com.tw.jellybean.models.Customer;
+import in.com.tw.jellybean.models.Position;
 
 import java.util.Currency;
 import java.util.Date;
+import java.util.List;
 
 public class Project {
 
@@ -19,6 +21,7 @@ public class Project {
     private Domain domain;
     private ProjectStatus status;
     private Customer customer;
+    private List<Position> positions;
 
     @Override
     public String toString() {
